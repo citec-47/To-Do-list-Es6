@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Atril33/Todo_List_ES6.git"
+    "url": "git+https://"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Atril33/Todo_List_ES6/issues"
+    "url": "https://github.com/issues"
   },
-  "homepage": "https://github.com/Atril33/Todo_List_ES6#readme",
+  "homepage": "https://e",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css": "^3.0.0",
