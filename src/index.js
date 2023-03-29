@@ -1,35 +1,34 @@
 import './style.css';
 
-const arrayOfObjects = [
+const myListtasks = [
   {
-    description: 'Wash dishes',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Clean the entire building',
-    completed: false,
+    description: 'Going to church',
+    complated: false,
     index: 1,
   },
   {
-    description: 'Doing laundry',
+    description: 'wash dresses',
     completed: false,
     index: 2,
   },
+  {
+    description: 'clean the compound',
+    completed: false,
+    index: 3,
+  },
 ];
 
-const myTodoListProjectone = document.querySelector('.dailyTaskOfTodO');
+const myListOfALLmyTodoTask = document.querySelector('.myListOfALLmyTodoTask');
 
-const myToDoComplextion = () => {
-  arrayOfObjects.forEach((taskOfTodo) => {
-    const list = document.createElement('li');
-    list.className = 'mylistItem';
-    list.innerHTML = `<div class="showingMycontent">
-                        <input type="mycheckbox" id="${taskOfTodo.index}" class="check">
-                        <p class="description">${taskOfTodo.description}</p>
-                        <p class="myListholder"><i class="fa-solid fa-ellipsis-vertical"></i></p>
-                    </div><br>
-                    <hr>`; myTodoListProjectone.appendChild(list);
-  });
+const disPlayMyListtodo = () => {
+  for (let i = 0; i < myListtasks.length; i += 1) {
+    const myTaskt = myListtasks[i];
+    myListOfALLmyTodoTask.innerHTML += `<li class="mytask row_one">
+    <input type="checkbox" id="check" name="check" >
+    <label class="label" id="label" for="check">${myTaskt.description}</label>
+    <span>&#8285;</span>
+   </li>`;
+  }
 };
-myToDoComplextion();
+
+window.onload = disPlayMyListtodo();

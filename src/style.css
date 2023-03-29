@@ -1,112 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-weight: 700;
 }
 
 body {
-  background-color: bisque;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  background-color: #f6f6f6;
+  font-family: "Roboto", "Open Sans", "Lucida Grande", tahoma, verdana, arial, sans-serif;
 }
 
-.myToDoMain {
-  padding: 3rem 1rem 3rem 1rem;
-  width: 50%;
-  height: auto;
+ul {
+  list-style: none;
 }
 
-header {
+.flex {
   display: flex;
-  align-items: center;
+}
+
+.myIcons {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  background-color: #fff;
-  padding: 1rem 1rem 1rem 0.5rem;
-  color: rgba(56, 53, 53, 0.9);
 }
 
-.mytodo {
-  width: 100%;
-  height: 3rem;
-  border: none;
-  font-size: 1.5rem;
+.myIcons p {
+  margin-left: 15px;
 }
 
-.mytodo:focus {
-  border: none;
-  outline: none;
-}
-
-.myClassOfList {
+.myListtasks {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  background-color: #fff;
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
-  font-size: 1.5rem;
-}
-
-.dailyTaskOfTodO {
   width: 100%;
-  border: 2px solid white;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  margin: 30px 0;
 }
 
-.list-item {
-  display: flex;
+.myToDotitle {
   flex-direction: column;
+  list-style-type: none;
+  color: #c1bfbf;
+  padding: 10px;
+}
+
+.myToDotitle span {
+  color: #c1bfbf;
+}
+
+.myListtasks .myMain {
+  background-color: #fff;
+  width: 70%;
+  padding: 30px;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+.addingMyDayTasks {
+  width: 100%;
+  list-style-type: none;
+}
+
+.target {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.myTasktoday input {
+  padding: 0 40px 0 1rem;
+  line-height: 30px;
+  border: none;
+  font-style: italic;
+  width: 95%;
+  height: 50px;
+}
+
+.myTasktoday input::placeholder {
+  font-size: 15px;
+  color: #c1bfbf;
+}
+
+.target span {
+  font-size: 10px;
+  color: #c1bfbf;
+  flex-direction: row;
+  margin-left: 30%;
+  margin-top: 20px;
+}
+
+.mytask {
+  position: relative;
+  background-color: #fff;
+  padding: 0 49px 0 1em;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-weight: 300;
+  height: 70px;
+  letter-spacing: 1px;
   align-items: center;
-  padding: 1rem 1rem 0 0.5rem;
-  color: rgba(56, 53, 53, 0.9);
 }
 
-.showingMycontent {
-  display: flex;
+.myListtasks .label {
   width: 100%;
+  line-height: 20px;
+  word-wrap: break-word;
+  margin-left: 20px;
 }
 
-hr {
-  width: 100%;
-}
-
-.description {
-  flex-basis: 93%;
-}
-
-.check {
-  margin-right: 0.7rem;
-  flex-basis: 5%;
-}
-
-.fa-ellipsis-vertical {
+.mytask span {
+  opacity: 0.2;
+  float: right;
+  margin-right: -3em;
+  padding: 0 0.5rem;
+  line-height: 0;
   cursor: move;
 }
 
-.clearAll {
-  background-color: beige;
-  padding: 1.2rem;
-  text-align: center;
-  color: gray;
-  transition: all 0.5s ease-in-out;
+.myListOfALLmyTodoTask {
+  align-items: center;
 }
 
-.clearAll:hover {
-  cursor: pointer;
-  box-shadow: 3px 3px 3px 3px;
-}
-
-.fa-beat {
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-@media only screen and (min-width: 400px) and (max-width: 768px) {
-  .myToDoMain {
-    width: 100%;
-  }
+.myBtnClear {
+  background-color: rgba(128, 128, 128, 0.699);
+  color: rgb(220, 220, 220);
+  margin-bottom: 30px;
+  width: 100%;
+  height: 60px;
+  margin-top: 30px;
 }
