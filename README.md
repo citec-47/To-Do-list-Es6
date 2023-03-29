@@ -78,8 +78,6 @@ To DO LIst is a website that allows individuals to add and remove  task from a l
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://github.com/citec-47/To-Do-list-Es6/tree/To_DO)
-
 <!-- GETTING STARTED -->
 
 ## Getting Started
