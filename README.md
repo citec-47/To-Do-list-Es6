@@ -50,7 +50,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Todo List project<a name="about-project"></a>
 
-> In this project, an individual can set a list of things to do achive by the end of a day.
+To DO LIst is a website that allows individuals to add and remove  task from a list of registered activities on the website. JavaScript objects and arrays is used to achieved The Project .
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -157,7 +157,7 @@ For the future features we will add sign up page and also favorite button to the
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/citec-47/live-demo/issues/2).
+Feel free to check the [issues page](https://github.com/citec-47/To-Do-list-Es6/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

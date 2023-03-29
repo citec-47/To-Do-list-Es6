@@ -1,28 +1,26 @@
 /* eslint-disable import/no-unresolved */
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import { resolve } from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Output Management',
-      filename: 'index.html',
-      template: './src/index.html',
-    }),
+export const mode = 'development';
+export const entry = './src/index.js';
+export const output = {
+  filename: 'main.js',
+  path: resolve(__dirname, 'dist'),
+  clean: true,
+};
+export const module = {
+  rules: [
+    {
+      test: /\.css$/i,
+      use: ['style-loader', 'css-loader'],
+    },
   ],
 };
+export const plugins = [
+  new HtmlWebpackPlugin({
+    title: 'Output Management',
+    filename: 'index.html',
+    template: './src/index.html',
+  }),
+];

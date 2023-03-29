@@ -4,124 +4,109 @@
   box-sizing: border-box;
 }
 
-.show-none {
-  display: none;
-}
-
-.display-row {
-  display: flex;
-}
-
-.back-view {
-  background-color: rgb(241, 241, 181);
-}
-
-input[type=text] {
-  border: none;
-  outline: none;
-  background-color: inherit;
-  font-size: 18px;
-  height: 25px;
-  width: 100%;
-}
-
 body {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-  background: #f6f6f6;
-}
-
-.myTodoListcontainer {
-  margin: auto;
-  width: 60%;
-  height: auto;
+  background-color: bisque;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.49);
-  -webkit-box-shadow: 0 0 35px 0 rgba(122, 116, 116, 0.49);
-  -moz-box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.49);
-  border-radius: 5px;
-  background: #fff;
+  font-family: 'Poppins', sans-serif;
 }
 
-.myTodoListcontainer h1 {
-  width: 100%;
-  padding: 0.6em;
-  user-select: none;
-  font-size: 24px;
+.myToDoMain {
+  padding: 3rem 1rem 3rem 1rem;
+  width: 50%;
+  height: auto;
 }
 
-.border-line {
-  text-decoration: line-through;
-  color: #808080;
-}
-
-.todosMylist {
-  list-style: none;
-  width: 100%;
-}
-
-.todoMyitem {
+header {
   display: flex;
-  padding: 1em;
-  border-bottom: 1px solid #9b9999;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1rem 1rem 1rem 0.5rem;
+  color: rgba(56, 53, 53, 0.9);
+}
+
+.mytodo {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.mytodo:focus {
+  border: none;
+  outline: none;
+}
+
+.myClassOfList {
+  display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  background-color: #fff;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  font-size: 1.5rem;
 }
 
-.todoMyitem-left {
+.dailyTaskOfTodO {
+  width: 100%;
+  border: 2px solid white;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 0 0.5rem;
+  color: rgba(56, 53, 53, 0.9);
+}
+
+.showingMycontent {
   display: flex;
   width: 100%;
-  flex: 2;
 }
 
-.todoMyitem > span {
-  cursor: pointer;
-  color: #000;
-}
-
-.todoMyitem-left > .mycheckbox {
-  margin: 0 1em 0 0;
-}
-
-.todo-input {
-  height: 100%;
-  padding: 0.5em 0;
+hr {
   width: 100%;
-  border: none;
-  outline: none;
 }
 
-.todo-input:active {
-  border: none;
-  outline: none;
+.description {
+  flex-basis: 93%;
 }
 
-.deLetBtn {
-  padding: 1em;
-  font-size: 16px;
-  font-weight: 700;
+.check {
+  margin-right: 0.7rem;
+  flex-basis: 5%;
+}
+
+.fa-ellipsis-vertical {
+  cursor: move;
+}
+
+.clearAll {
+  background-color: beige;
+  padding: 1.2rem;
+  text-align: center;
+  color: gray;
+  transition: all 0.5s ease-in-out;
+}
+
+.clearAll:hover {
   cursor: pointer;
-  align-self: center;
-  border: none;
-  background-color: #f9f9f9;
-  color: #808080;
-  width: 100%;
-  height: 55px;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  box-shadow: 3px 3px 3px 3px;
 }
 
-.deLetBtn:hover {
-  color: #000;
+.fa-beat {
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-#myIcon {
-  color: #000;
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .myToDoMain {
+    width: 100%;
+  }
 }
