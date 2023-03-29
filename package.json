@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://"
+    "url": "git+https://github.com/citec-47/To-Do-list-Es6/blob/To_Do_List_Set_Up/README.md"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/issues"
+    "url": "https:https://github.com/citec-47/To-Do-list-Es6/issues"
   },
-  "homepage": "https://e",
+  "homepage": "https://github.com/citec-47/To-Do-list-Es6/tree/To_DO",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css": "^3.0.0",
