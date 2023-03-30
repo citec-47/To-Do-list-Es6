@@ -4,20 +4,20 @@
   "description": "<a name=\"readme-top\"></a>",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack --mode development",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/citec-47/To-Do-list-Es6/blob/To_Do_List_Set_Up/README.md"
+    "url": "git+https://github.com/citec-47/To-Do-list-Es6/tree/To_DO"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ndonyi",
   "license": "ISC",
   "bugs": {
-    "url": "https:https://github.com/citec-47/To-Do-list-Es6/issues"
+    "url": "https://github.com/citec-47/To-Do-list-Es6/issues"
   },
-  "homepage": "https://github.com/citec-47/To-Do-list-Es6/tree/To_DO",
+  "homepage": "https://github.com/citec-47/To-Do-list-Es6/blob/To_DO/README.md",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css": "^3.0.0",

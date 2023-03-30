@@ -4,15 +4,15 @@
   box-sizing: border-box;
 }
 
-.show-none {
+.display-none {
   display: none;
 }
 
-.move-row {
+.display-flex {
   display: flex;
 }
 
-.background-focus {
+.bg-focus {
   background-color: rgb(241, 241, 181);
 }
 
@@ -34,7 +34,7 @@ body {
   background: #f6f6f6;
 }
 
-.mytodoList_main {
+.container {
   margin: auto;
   width: 60%;
   height: auto;
@@ -49,24 +49,24 @@ body {
   background: #fff;
 }
 
-.mytodoList_main h1 {
+.container h1 {
   width: 100%;
   padding: 0.6em;
   user-select: none;
   font-size: 24px;
 }
 
-.border {
+.line-through {
   text-decoration: line-through;
   color: #808080;
 }
 
-.mytodoslist {
+.todos-list {
   list-style: none;
   width: 100%;
 }
 
-.mytodoitem {
+.todo-item {
   display: flex;
   padding: 1em;
   border-bottom: 1px solid #9b9999;
@@ -75,22 +75,22 @@ body {
   width: 100%;
 }
 
-.mytodoitem-left {
+.todo-item-left {
   display: flex;
   width: 100%;
   flex: 2;
 }
 
-.mytodoitem > span {
+.todo-item > span {
   cursor: pointer;
   color: #000;
 }
 
-.mytodoitem-left > .mycheckbox {
+.todo-item-left > .checkbox {
   margin: 0 1em 0 0;
 }
 
-.todomyinput {
+.todo-input {
   height: 100%;
   padding: 0.5em 0;
   width: 100%;
@@ -98,12 +98,12 @@ body {
   outline: none;
 }
 
-.todomyinput:active {
+.todo-input:active {
   border: none;
   outline: none;
 }
 
-.myclearbtn {
+.clearbtn {
   padding: 1em;
   font-size: 16px;
   font-weight: 700;
@@ -122,6 +122,6 @@ body {
   color: #000;
 }
 
-#myIcons {
+#myfaicon {
   color: #000;
 }
