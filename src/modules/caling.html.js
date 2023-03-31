@@ -58,7 +58,7 @@ const add_my_Html = () => {
       add_my_Html();
     });
   }
-  document.getElementById('add-input').value = '';
+  document.getElementById('addin_input').value = '';
 };
 
 // eslint-disable-next-line camelcase

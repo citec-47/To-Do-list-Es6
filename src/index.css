@@ -11,7 +11,7 @@ body {
   align-items: center;
 }
 
-.back {
+.maine {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -26,18 +26,18 @@ body {
   max-width: 700px;
 }
 
-.head {
+.main-head-2do {
   display: flex;
   width: 100%;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
 }
 
-.head p {
+.main-head-2do p {
   padding: 20px;
 }
 
-.head i {
+.main-head-2do i {
   color: #707070;
   padding: 20px;
   cursor: pointer;
@@ -49,7 +49,7 @@ form {
   border-bottom: 1px solid #ccc;
 }
 
-#add-input {
+#addin_input {
   flex: 1;
   border: none;
   padding: 20px;
@@ -71,7 +71,7 @@ form button {
   cursor: pointer;
 }
 
-.list {
+.mylist {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -115,7 +115,7 @@ form button {
   color: #707070;
 }
 
-.clear {
+.clearmytex {
   width: 100%;
   font-size: 16px;
   color: #707070;
