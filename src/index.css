@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #ccc;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.back {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 3px 3px 15px #8b8b8b;
+  width: 50%;
+  max-width: 700px;
+}
+
+.head {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.head p {
+  padding: 20px;
+}
+
+.head i {
+  color: #707070;
+  padding: 20px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+#add-input {
+  flex: 1;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  min-width: 0;
+  outline: none;
+}
+
+form input::placeholder {
+  font-style: italic;
+  font-size: 16px;
+}
+
+form button {
+  border: none;
+  margin: 20px;
+  background-color: #fff;
+  color: #afaeae;
+  cursor: pointer;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.item .itemText {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  flex: 1;
+  font-size: 16px;
+  outline: none;
+}
+
+.item .checkbox {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.item button {
+  margin: 15px 20px 15px 0;
+  background-color: #fff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  color: #707070;
+}
+
+.clear {
+  width: 100%;
+  font-size: 16px;
+  color: #707070;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  padding: 20px;
+}
