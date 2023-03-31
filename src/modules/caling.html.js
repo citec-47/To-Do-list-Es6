@@ -31,6 +31,9 @@ const add_my_Html = () => {
     const checkbox_todo = document.createElement('input');
     checkbox_todo.className = 'checkbox';
     checkbox_todo.type = 'checkbox';
+    // checkbox_todo.addEventListener('click' => {
+    //   console.log('hello')
+    // })
     checkbox_todo.checked = arrMain[index].completed ? 'checked' : '';
     form_todo.appendChild(checkbox_todo);
     const input = document.createElement('input');
