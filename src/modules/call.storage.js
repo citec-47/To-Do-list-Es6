@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable camelcase */
-import main_re_Arr from './calling.const.js';
+/*eslint-disable*/
+import { mytasks } from '../index.js';
 
-const stoRAge = () => {
-  localStorage.setItem('array', JSON.stringify(main_re_Arr));
+const shop = () => {
+  localStorage.setItem('mytasks', JSON.stringify(mytasks));
 };
-export default stoRAge;
+
+export { shop };
