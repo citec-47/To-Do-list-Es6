@@ -1,103 +1,125 @@
-import './style.css';
-import TodoArray from './modules/TodoArray.js';
-import TodoItem from './modules/TodoItem.js';
+/* eslint-disable  import/no-cycle, import/no-mutable-exports */
+import './mystyles.css';
+import { shop } from './modules/call.storage.js';
+import { addnewTask } from './modules/calling.task.js';
+import { myupdate } from './modules/calling.update.js';
+import { erase } from './modules/calling.delete.js';
+import { view, cleaning } from './modules/calling.check.js';
 
-const form = document.querySelector('form');
-const todoWrapper = document.querySelector('.todo-container');
-const removeCompleted = document.querySelector('button');
+const addmyButton = document.querySelector('.fa-arrow-right-to-bracket');
+export const toodoo = document.querySelector('.toodoo');
+export const lisNot = document.querySelector('.lisNot');
+export const funyTasks = document.querySelector('.allactivity');
+const cleartext = document.querySelector('.cleartext');
 
-const todoArray = new TodoArray();
+export let mytasks = [];
 
-const popUp = () => {
-  const popUp = document.querySelector('#clear-completed');
-  popUp.classList.add('active');
+let descrit;
+let myCheckBox;
 
-  setTimeout(() => {
-    popUp.classList.remove('active');
-  }, 2500);
+export const displayMYtasks = () => {
+  mytasks.forEach((task, i) => {
+    const taskMypane = document.createElement('div');
+    taskMypane.className = 'taskpane';
+
+    const topMyLeft = document.createElement('div');
+    topMyLeft.className = 'topleft';
+
+    const topmyRight = document.createElement('div');
+    topmyRight.className = 'topright';
+
+    const middle = document.createElement('div');
+    middle.className = 'leftright';
+
+    if (i % 2 === 0) middle.classList.add('bg-color');
+
+    const myCheck = document.createElement('input');
+    myCheck.className = 'myCheck';
+    myCheck.setAttribute('type', 'checkbox');
+    myCheck.setAttribute('id', `${task.index}`);
+
+    const descripts = document.createElement('p');
+    descripts.textContent = task.descripts;
+    descripts.className = 'descripts';
+    descripts.setAttribute('contenteditable', 'true');
+
+    const mytrash = document.createElement('i');
+    mytrash.className = 'fa-solid fa-trash-can fa-beat';
+
+    const joint = document.createElement('i');
+    joint.className = 'fa-solid fa-ellipsis-vertical';
+
+    topMyLeft.append(myCheck, descripts, mytrash);
+    topmyRight.appendChild(joint);
+    middle.append(topMyLeft, topmyRight);
+
+    const dorector = document.createElement('hr');
+
+    taskMypane.append(middle, dorector);
+
+    funyTasks.appendChild(taskMypane);
+
+    shop();
+
+    topMyLeft.addEventListener('mouseenter', () => {
+      mytrash.style.display = 'block';
+      joint.style.display = 'none';
+    });
+
+    topMyLeft.addEventListener('mouseleave', () => {
+      mytrash.style.display = 'none';
+      joint.style.display = 'block';
+    });
+
+    descripts.addEventListener('input', () => {
+      descrit = descripts.textContent;
+      myupdate(descrit, i);
+    });
+
+    mytrash.addEventListener('click', () => {
+      erase(i);
+    });
+
+    myCheck.addEventListener('change', () => {
+      myCheckBox = myCheck;
+      view(i, myCheckBox);
+    });
+  });
 };
 
-const renderTodos = () => {
-  todoWrapper.innerHTML = '';
-  if (todoArray.getAllTodos().length === 0) {
-    todoWrapper.innerHTML = '<h3 class= "alert">Todo is Empty</h3>';
-  } else {
-    todoArray.getAllTodos().forEach((todo, index) => {
-      const todoItem = document.createElement('div');
-      todoItem.classList.add('todo-item');
-      const todoStatus = () => {
-        const status = todo.completed ? 'checked' : '';
-        return status;
-      };
-      todoItem.innerHTML = `
-        <div data-check = ${index} class="todo border-bottom flex">
-        <input data-complete = ${todo.id} class="box" ${todoStatus()} type="checkbox" />
-        <input data-item = ${todo.id} class="item ${todoStatus()}" type="text" value="${todo.description}" />
-        <i id="delete-btn" data-remote = ${index} class='bx bx-trash' id="delete-btn"></i>
-        </div>
-      `;
-      todoWrapper.appendChild(todoItem);
-    });
-  }
+addmyButton.addEventListener('click', addnewTask);
 
-  const deletBtn = document.querySelectorAll('#delete-btn');
-  deletBtn.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const { remote } = e.target.dataset;
-      todoArray.deleteTodo(remote);
-      renderTodos();
-    });
-  });
-
-  const editTodo = document.querySelectorAll('.todo-item');
-  const checkedBox = document.querySelectorAll('.box');
-  editTodo.forEach((todo) => {
-    todo.addEventListener('keyup', (e) => {
-      const { dataset, value } = e.target;
-      const id = dataset.item;
-      const description = value.trim();
-      const completed = false;
-      const newTodo = new TodoItem(description, completed, id);
-      todoArray.updateTodo(id, newTodo);
-      checkedBox[id - 1].checked = false;
-      todo.classList.remove('checked');
-    });
-  });
-
-  const todoItems = document.querySelectorAll('.item');
-  const chexkbox = document.querySelectorAll('.box');
-  chexkbox.forEach((checkbox) => {
-    checkbox.addEventListener('click', (e) => {
-      const { complete } = e.target.dataset;
-      if (checkbox.checked) {
-        todoArray.toggleCompleted(complete);
-        todoItems[complete - 1].classList.add('checked');
-      } else {
-        todoArray.toggleCompleted(complete);
-        todoItems[complete - 1].classList.remove('checked');
-      }
-    });
-  });
-
-  removeCompleted.addEventListener('click', () => {
-    todoArray.clearCompleted();
-    renderTodos();
-    popUp();
-  });
-};
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const todoText = document.querySelector('.input').value;
-  const todo = new TodoItem(
-    todoText,
-    false,
-    todoArray.getAllTodos().length + 1,
-  );
-  todoArray.addTodo(todo);
-  form.reset();
-  document.querySelector('.input').focus();
-  renderTodos();
+window.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') addnewTask();
 });
 
-window.onload = renderTodos();
+window.onload = () => {
+  mytasks = JSON.parse(localStorage.getItem('mytasks'));
+  if (mytasks) {
+    mytasks.forEach((fresh) => {
+      fresh.completed = false;
+    });
+    displayMYtasks();
+  } else {
+    mytasks = [];
+  }
+};
+
+cleartext.addEventListener('click', cleaning);
+
+export const displaymyTasksCaller = (gem) => {
+  if (gem.length === 0) {
+    mytasks = [];
+    shop();
+
+    funyTasks.innerHTML = '';
+  } else {
+    mytasks = gem.map((mapped, i) => ({
+      descripts: `${mapped.descripts}`,
+      index: `${i + 1}`,
+      completed: false,
+    }));
+    funyTasks.innerHTML = '';
+    displayMYtasks();
+  }
+};
