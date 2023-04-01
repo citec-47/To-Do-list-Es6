@@ -1,10 +1,10 @@
 /* eslint-disable  import/no-cycle, import/no-mutable-exports */
 import './mystyles.css';
-import { shop } from './modules/local-storage.js';
-import { addnewTask } from './modules/task.js';
-import { myupdate } from './modules/update.js';
-import { erase } from './modules/delete.js';
-import { view, cleaning } from './modules/check.js';
+import { shop } from './modules/call.storage.js';
+import { addnewTask } from './modules/calling.task.js';
+import { myupdate } from './modules/calling.update.js';
+import { erase } from './modules/calling.delete.js';
+import { view, cleaning } from './modules/calling.check.js';
 
 const addmyButton = document.querySelector('.fa-arrow-right-to-bracket');
 export const toodoo = document.querySelector('.toodoo');
@@ -14,7 +14,8 @@ const cleartext = document.querySelector('.cleartext');
 
 export let mytasks = [];
 
-let descrit; let myCheckBox;
+let descrit;
+let myCheckBox;
 
 export const displayMYtasks = () => {
   mytasks.forEach((task, i) => {

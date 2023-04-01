@@ -1,6 +1,6 @@
 /* eslint-disable  import/no-cycle */
 import { displaymyTasksCaller, mytasks, funyTasks } from '../index.js';
-import { shop } from './local-storage.js';
+import { shop } from './call.storage.js';
 
 export const view = (index, a) => {
   if (a.checked) {
