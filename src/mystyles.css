@@ -5,7 +5,7 @@
 }
 
 body {
-  background:whitesmoke;
+  background: whitesmoke;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -128,7 +128,6 @@ hr {
   cursor: pointer;
   box-shadow: 3px 3px 3px 3px white;
   filter: invert(100%);
-
 }
 
 .fa-beat {
