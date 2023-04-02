@@ -4,11 +4,11 @@ import { mytasks, lisNot } from '../index.js';
 import { shop } from './call.storage.js';
 
 export const myupdate = (item, number) => {
-  const test = mytasks.some((tester) => {
+  const trial = mytasks.some((tester) => {
     if (tester.descripts.toLowerCase() === item.toLowerCase()) return true;
     return false;
   });
-  if (test) {
+  if (trial) {
     lisNot.style.display = 'block';
     lisNot.innerHTML = "Sorry! You can't add the same task twice";
   } else {

@@ -31,7 +31,7 @@ export const displayMYtasks = () => {
     const middle = document.createElement('div');
     middle.className = 'leftright';
 
-    if (i % 2 === 0) middle.classList.add('bg-color');
+    if (i % 2 === 0) middle.classList.add('back-color');
 
     const myCheck = document.createElement('input');
     myCheck.className = 'myCheck';
@@ -61,7 +61,7 @@ export const displayMYtasks = () => {
 
     shop();
 
-    topMyLeft.addEventListener('mouseenter', () => {
+    topMyLeft.addEventListener('nymousse', () => {
       mytrash.style.display = 'block';
       joint.style.display = 'none';
     });
